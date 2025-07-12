@@ -4,7 +4,7 @@ This is a personal website built with **Next.js** to showcase my coding skills, 
 
 ## Live Demo
 
-[View Website](https://WIP.com)
+[View Website](https://google.com)
 
 ## Features
 
@@ -66,5 +66,5 @@ npm start
 ## Author
 
 **Barney Jesse**
-[LinkedIn](https://linkedin.com/in/yourprofile)
-[GitHub](https://github.com/yourusername)
+[LinkedIn](www.linkedin.com/in/baranpas-jesse)
+[GitHub](https://github.com/barnbarnwow)
