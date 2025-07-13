@@ -66,5 +66,5 @@ npm start
 ## Author
 
 **Barney Jesse**
-[LinkedIn](www.linkedin.com/in/baranpas-jesse)
+[LinkedIn](https://www.linkedin.com/in/baranpas-jesse/)
 [GitHub](https://github.com/barnbarnwow)
