@@ -1,31 +1,58 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="p-9">
-      <div className="flex justify-between items-center">
-        <div className="text-2xl font-bold">JPOINT</div>
-        <ul className="flex text-xl space-x-9">
-          <li>
-            <a href="/" className="hover:text-teal-500">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="/" className="hover:text-teal-500">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="/about" className="hover:text-teal-500">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="/contact" className="hover:text-teal-500">
-              Contact
-            </a>
-          </li>
-        </ul>
+    // Navbar
+    <nav className="relative flex justify-between md:justify-center items-center p-6">
+      {/* Logo */}
+      <div className="text-2xl font-bold md:px-12">
+        <Link href="/" className="hover:text-teal-900">
+          JPoint
+        </Link>
       </div>
+      {/* Desktop Icons */}
+      <div className="hidden md:flex gap-12">
+        <Link href="/" className="hover:text-teal-300">
+          Home
+        </Link>
+        <Link href="/about" className="hover:text-teal-300">
+          About
+        </Link>
+        <Link href="/projects" className="hover:text-teal-300">
+          Projects
+        </Link>
+        <Link href="/contact" className="hover:text-teal-300">
+          Contact
+        </Link>
+      </div>
+      {/* Hamburger Menu for Mobile */}
+      <div className="md:hidden">
+        <button className="w-12 h-12" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? "Close" : "Menu"}
+        </button>
+      </div>
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="absolute top-full left-0 w-full z-50 bg-teal-900">
+          <Link href="/" className="block p-4 hover:bg-teal-100">
+            Home
+          </Link>
+          <Link href="/about" className="block p-4 hover:bg-teal-100">
+            About
+          </Link>
+          <Link href="/projects" className="block p-4 hover:bg-teal-100">
+            Projects
+          </Link>
+          <Link href="/contact" className="block p-4 hover:bg-teal-100">
+            Contact
+          </Link>
+        </div>
+      )}
     </nav>
   );
 }
